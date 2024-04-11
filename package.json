@@ -1,0 +1,19 @@
+{
+  "name": "wk4assignment",
+  "version": "1.0.0",
+  "description": "Tech Educators Bootcamp Week 4 assignment building a visitor guestbook",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "better-sqlite3": "^9.5.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
