@@ -4,6 +4,9 @@ import express from "express";
 //Instantiate our express app which is a massive object with lots of things in it.
 const app = express();
 
+//tell express to expect info in body of request
+app.use(express.json());
+
 //create a table
 const friends = [
   { name: "Jaya", thing: "tea" },
