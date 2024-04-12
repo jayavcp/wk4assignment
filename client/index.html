@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Simple Guestbook" content="User comments" />
+    <script src="./app.js" type="module" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Guestbook</title>
+  </head>
+  <body>
+    <h1>Guestbook</h1>
+    <h2>Sending info from client to server and fetching it back</h2>
+    <form id="messageform">
+      <label>Username</label>
+      <input
+        name="username"
+        aria-placeholder="Username"
+        placeholder="Username"
+      />
+      <label>Comment</label>
+      <textarea
+        type="text"
+        name="comment"
+        aria-placeholder="your comments go here"
+        placeholder="your comments go here"
+      ></textarea>
+      <button>Submit</button>
+      <h2>Here are your comments:</h2>
+      <div id="messageboard">This is where all the comments will go</div>
+    </form>
+  </body>
+</html>

@@ -1,13 +1,15 @@
 //import express from node modules file on LHS
-import express from "express";
+import express, { request } from "express";
+import cors from "cors";
 
 //Instantiate our express app which is a massive object with lots of things in it.
 const app = express();
 
 //tell express to expect info in body of request
 app.use(express.json());
+app.use(cors()); //this allows client to speak to server without being blocked. cors is a bridge
 
-//create a table
+//example: create a mini table to use with an endpoint
 const friends = [
   { name: "Jaya", thing: "tea" },
   { name: "Steve", thing: "yugioh" },
@@ -31,7 +33,14 @@ app.get("/random", function (request, response) {
   response.json(random);
 });
 
-//start the server. Listen takes 2 params
+//messages endpoint
+app.post("/messages", function (request, response) {
+  response.json(request.body);
+  console.log(request.body);
+});
+
+//start the server on http://localhost:1234/
+//Listen takes 2 params
 app.listen(1234, function () {
   console.log("app is running on PORT 1234");
 });
